@@ -32,11 +32,7 @@ public class ManageItemsActivity extends AppCompatActivity implements ManageItem
 
         loadItems();
     }
-    public void onBack(View view){
-        Intent intent = new Intent(ManageItemsActivity.this, MainActivityStart.class);
-        startActivity(intent);
-        finish();
-    }
+
     private void loadItems() {
         new Thread(() -> {
             itemList = AppDatabase.getInstance(this).shoppingDao().getAll();
@@ -46,10 +42,13 @@ public class ManageItemsActivity extends AppCompatActivity implements ManageItem
                 recyclerView.setAdapter(adapter);
             });
         }).start();
+
     }
 
    public void finishManage (View view) {
-        finish();
+       Intent intent = new Intent(ManageItemsActivity.this, MainActivityStart.class);
+       startActivity(intent);
+       finish();
    }
     public void onAddItem(View view) {
         String name = nameInput.getText().toString().trim();
@@ -78,6 +77,8 @@ public class ManageItemsActivity extends AppCompatActivity implements ManageItem
                 loadItems();
             });
         }).start();
+
+
     }
 
     @Override

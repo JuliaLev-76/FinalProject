@@ -62,17 +62,11 @@
         android:id="@+id/btnBackToMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Finish"
+        android:text="Finish and Back"
         android:onClick="finishManage"
         android:textSize="25sp"
         android:minHeight="48dp"
         android:layout_marginTop="12dp" />
 
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="BACK"
-        android:onClick="onBack"
-        android:layout_marginTop="12dp" />
+
 </LinearLayout>

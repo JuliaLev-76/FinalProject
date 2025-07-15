@@ -30,6 +30,8 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:text="1"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
         android:gravity="center"
         android:backgroundTint="#000000" />
 </LinearLayout>
